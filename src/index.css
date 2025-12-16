@@ -1,0 +1,237 @@
+@import "tailwindcss";
+
+/* ================================= */
+@layer base {
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: #c084fc transparent;
+  }
+
+  html::-webkit-scrollbar {
+    @apply w-3; 
+  }
+
+  html::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    @apply rounded-full border-2 border-solid border-white dark:border-gray-900;
+    background: linear-gradient(to bottom, #a855f7, #ec4899);
+  }
+
+  html::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #9333ea, #db2777);
+  }
+
+  .dark html::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #a855f7, #ec4899);
+  }
+
+  .dark html::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #a855f7, #ec4899);
+  }
+}
+/* ================================ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme{
+    --color-mainColor:#B03052;
+    --color-primaryColor: #32012f;
+    --color-secondaryColor: #FFC1B4;
+    --color-darkColor: #A35C7A;
+    --color-btn:#C890A7;
+    --font-caveat:'Caveat Variable', cursive;
+    --font-londrina:'Londrina Outline', system-ui;
+}
+
+body {
+    color: white;
+    background: linear-gradient(-45deg,#648DB3, #1B3C53,#648DB3,  #1B3C53 ,#1B3C53, #648DB3);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    /* font-family: 'Be Vietnam Pro', sans-serif; */
+  font-family: 'Lexend Variable', sans-serif;
+}
+
+.dark body{
+  background: linear-gradient(-45deg,#000000, #6B3F69, #000000, #6B3F69, #000000);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+  color: white;
+}
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    @media (width >= 75rem /* 1280px */) {
+        max-width: 75rem /* 1280px */;
+    }
+
+}
+.gray-txt{
+    @apply text-gray-400 
+}
+
+.gradient-text{
+    @apply bg-gradient-to-r from-[#B03052]  via-[#D76C82] to-[#FFC1B4] bg-clip-text text-transparent
+}
+.dark .gradient-text{
+    @apply bg-gradient-to-r from-[#441752]  via-[#D76C82] to-[#FFC1B4] bg-clip-text text-transparent
+}
+
+.gradient-headings{
+  @apply bg-gradient-to-tl from-[#B03052]  to-[#FFC1B4] bg-clip-text text-transparent
+}
+::selection{
+    background-color: #dccfc0b0;
+    color: white;
+}
+/* Shadow */
+.glow-circle {
+  border-radius: 50%;
+  box-shadow: 0 0 20px 5px #F5C9B0;
+  animation: glow 1.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 30px 5px #F5C9B0;
+  }
+  50% {
+    box-shadow: 0 0 50px 10px #F5C9B0;
+  }
+}
+.dark .glow-circle {
+  border-radius: 50%;
+  box-shadow: 0 0 20px 5px #441752;
+  animation: darkglow 1.5s ease-in-out infinite;
+}
+
+@keyframes darkglow {
+  0%, 100% {
+    box-shadow: 0 0 30px 5px #441752;
+  }
+  50% {
+    box-shadow: 0 0 50px 10px #441752;
+  }
+}
+
+/* ======================== */
+
+
+.marquee-inner {
+    animation: marqueeScroll linear infinite;
+}
+
+@keyframes marqueeScroll {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader .preloader {
+  animation: rotate 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+
+@keyframes rotate {
+  50% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+.preloader span {
+  --c: #C890A7;
+  position: absolute;
+  display: block;
+  height: 64px;
+  width: 64px;
+  background: var(--c);
+  border: 1px solid var(--c);
+  border-radius: 100%;
+}
+
+.preloader span:nth-child(1) {
+  transform: translate(-28px, -28px);
+  animation: shape_1 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+
+@keyframes shape_1 {
+  60% {
+    transform: scale(0.4);
+  }
+}
+
+.preloader span:nth-child(2) {
+  transform: translate(28px, -28px);
+  animation: shape_2 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+
+@keyframes shape_2 {
+  40% {
+    transform: scale(0.4);
+  }
+}
+
+.preloader span:nth-child(3) {
+  position: relative;
+  border-radius: 0px;
+  transform: scale(0.98) rotate(-45deg);
+  animation: shape_3 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+
+@keyframes shape_3 {
+  50% {
+    border-radius: 100%;
+    transform: scale(0.5) rotate(-45deg);
+  }
+
+  100% {
+    transform: scale(0.98) rotate(-45deg);
+  }
+}
+
+.shadow {
+  position: relative;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  height: 16px;
+  width: 64px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  border: 1px solid #d9d9d9;
+  animation: shadow 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+
+@keyframes shadow {
+  50% {
+    transform: translateX(-50%) scale(0.5);
+    border-color: #f2f2f2;
+  }
+}
+
+/* ======================= */
