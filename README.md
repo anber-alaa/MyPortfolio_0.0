@@ -2,7 +2,8 @@
 
 <div align="center">
 
-![Portfolio Banner](https://via.placeholder.com/800x200/6366F1/ffffff?text=Anber+Alaa+Portfolio)
+<img width="1365" height="634" alt="full" src="https://github.com/user-attachments/assets/02339a83-d1d8-483f-9bab-dfbc28d00f51" />
+
 
 **A Modern & Interactive Portfolio Website Showcasing My Work**
 
@@ -37,3 +38,4 @@ Hi! I'm **Anber Alaa**, a passionate Frontend Developer specializing in building
 
 
 ---
+<img width="1365" height="636" alt="fullscreenProject" src="https://github.com/user-attachments/assets/e15e6ed4-5043-449a-a42d-291214ede618" />
