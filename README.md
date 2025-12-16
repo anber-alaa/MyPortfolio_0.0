@@ -19,8 +19,6 @@ Hi! I'm **Anber Alaa**, a passionate Frontend Developer specializing in building
 - 💻 Build responsive and interactive web applications
 - 🎨 Create stunning user interfaces with modern design principles
 - ⚡ Optimize performance and user experience
-- 🚀 Constantly learning and adapting to new technologies
-
 ---
 
 ## ✨ Portfolio Features
@@ -32,40 +30,10 @@ Hi! I'm **Anber Alaa**, a passionate Frontend Developer specializing in building
 - 🎭 **Interactive Elements** - Engaging animations and transitions
 - 📊 **Project Showcase** - Beautiful presentation of my work
 - 📧 **Contact Form** - Easy way to get in touch
-- 🔍 **SEO Optimized** - Ready for search engines
 
 ---
 
 </div>
 
----
-
-## 📱 Portfolio Sections
-
-### 🏠 Hero Section
-- Eye-catching introduction
-- Animated typography
-- Call-to-action buttons
-- Social media links
-
-### 👨‍💻 About Section
-- Personal introduction
-- Professional background
-- Skills and expertise
-- Download resume option
-
-### 💼 Projects Section
-- Interactive project cards
-- Live demo links
-- GitHub repository links
 
 ---
-<div align="center">
-
-### 🌟 If you like this portfolio, give it a star!
-
-**Made with 💜 by Anber Alaa**
-
-[⬆ Back to Top](#-personal-portfolio)
-
-</div>
